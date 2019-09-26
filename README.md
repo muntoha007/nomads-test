@@ -219,7 +219,7 @@ func (u *Products) Delete(w http.ResponseWriter, r *http.Request) error {
 
 ```
 
-##Model
+## Model
 - Create new file models/product.go
 ```
 package models
