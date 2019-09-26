@@ -4,7 +4,7 @@
 - To standardize the coding
 
 ## Get Started
-- copy all files on https://bitbucket.org/rebelworksco/go-skeleton/src to your project directory
+- copy all files on [go-skeleton](https://bitbucket.org/rebelworksco/go-skeleton/src) to your project directory
 - cp .env.example .env
 - edit .env with your environment
 - go mod init your_git_source_project
@@ -351,7 +351,7 @@ func (u *ProductRequest) Transform(product *models.Product) *models.Product {
 
 ### Validation
 - Each request need validation
-- For detail example please read https://github.com/go-playground/validator/tree/v9.29.1/_examples
+- For detail example please read [validator example](https://github.com/go-playground/validator/tree/v9.29.1/_examples)
 - Open payloads/request/product_request.go
 - Add validation tag to NewProductRequest
 ```
