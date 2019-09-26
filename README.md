@@ -19,7 +19,7 @@
 Request -> Middleware -> Controller -> Models -> Response
 
 ## Directory Structure
-<pre>
+```
 -> cmd 
 -> controllers
 -> libraries 
@@ -30,7 +30,7 @@ Request -> Middleware -> Controller -> Models -> Response
 	-> response
 -> routing
 -> schema
-</pre>
+```
 
 ## Routing
 - Open routing/route.go
