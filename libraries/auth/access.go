@@ -13,6 +13,7 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
+// ScanAccess from routing file
 func ScanAccess(db *sqlx.DB) error {
 	var existingAccess []uint32
 	var err error
