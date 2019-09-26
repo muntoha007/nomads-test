@@ -12,7 +12,7 @@
 - go run cmd/main.go migrate
 - go run cmd/main.go seed
 - go run cmd/main.go scan-access
-- go test
+- go test (for run this command, you need docker installed in your laptop)
 - go run main.go
 
 ## Life Cycle
