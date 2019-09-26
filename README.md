@@ -19,16 +19,16 @@
 Request -> Middleware -> Controller -> Models -> Response
 
 ## Directory Structure
--> cmd
--> controllers
--> libraries
--> middleware
--> models
--> payloads
-    -> request
-    -> response
--> routing
--> schema
+> cmd
+> controllers
+> libraries
+> middleware
+> models
+> payloads
+    > request
+    > response
+> routing
+> schema
 
 ## Routing
 - Open routing/route.go
