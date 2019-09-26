@@ -1,7 +1,7 @@
 package request
 
 import (
-	"github.com/jacky-htg/go-services/models"
+	"bitbucket.org/rebelworksco/go-skeleton/models"
 )
 
 //NewUserRequest : format json request for new user

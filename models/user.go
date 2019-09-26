@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 
-	"github.com/jacky-htg/go-services/libraries/array"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/array"
 	"github.com/jmoiron/sqlx"
 )
 

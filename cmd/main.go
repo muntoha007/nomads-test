@@ -7,10 +7,10 @@ import (
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/jacky-htg/go-services/libraries/auth"
-	"github.com/jacky-htg/go-services/libraries/config"
-	"github.com/jacky-htg/go-services/libraries/database"
-	"github.com/jacky-htg/go-services/schema"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/auth"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/config"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/database"
+	"bitbucket.org/rebelworksco/go-skeleton/schema"
 	"github.com/pkg/errors"
 )
 

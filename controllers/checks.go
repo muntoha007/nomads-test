@@ -3,8 +3,8 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/jacky-htg/go-services/libraries/api"
-	"github.com/jacky-htg/go-services/libraries/database"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/api"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/database"
 	"github.com/jmoiron/sqlx"
 )
 

@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/jacky-htg/go-services/models"
+	"bitbucket.org/rebelworksco/go-skeleton/models"
 	"github.com/jmoiron/sqlx"
 )
 

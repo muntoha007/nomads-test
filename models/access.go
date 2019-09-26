@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"errors"
 
-	"github.com/jacky-htg/go-services/libraries/token"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/token"
 	"github.com/jmoiron/sqlx"
 )
 

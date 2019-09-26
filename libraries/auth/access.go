@@ -8,8 +8,8 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/jacky-htg/go-services/libraries/array"
-	"github.com/jacky-htg/go-services/models"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/array"
+	"bitbucket.org/rebelworksco/go-skeleton/models"
 	"github.com/jmoiron/sqlx"
 )
 

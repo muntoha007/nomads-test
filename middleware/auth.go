@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/go-chi/chi"
-	"github.com/jacky-htg/go-services/libraries/api"
-	"github.com/jacky-htg/go-services/libraries/array"
-	"github.com/jacky-htg/go-services/models"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/api"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/array"
+	"bitbucket.org/rebelworksco/go-skeleton/models"
 	"github.com/jmoiron/sqlx"
 )
 

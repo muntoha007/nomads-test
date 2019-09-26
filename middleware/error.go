@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jacky-htg/go-services/libraries/api"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/api"
 	"github.com/jmoiron/sqlx"
 )
 

@@ -1,7 +1,7 @@
 package response
 
 import (
-	"github.com/jacky-htg/go-services/models"
+	"bitbucket.org/rebelworksco/go-skeleton/models"
 )
 
 //UserResponse : format json response for user

@@ -1,7 +1,7 @@
 package request
 
 import (
-	"github.com/jacky-htg/go-services/models"
+	"bitbucket.org/rebelworksco/go-skeleton/models"
 )
 
 //NewRoleRequest : format json request for new role

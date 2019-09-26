@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jacky-htg/go-services/libraries/database/databasetest"
-	"github.com/jacky-htg/go-services/schema"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/database/databasetest"
+	"bitbucket.org/rebelworksco/go-skeleton/schema"
 	"github.com/jmoiron/sqlx"
 )
 

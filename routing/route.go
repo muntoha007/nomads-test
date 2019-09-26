@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/jacky-htg/go-services/controllers"
-	"github.com/jacky-htg/go-services/libraries/api"
-	"github.com/jacky-htg/go-services/middleware"
+	"bitbucket.org/rebelworksco/go-skeleton/controllers"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/api"
+	"bitbucket.org/rebelworksco/go-skeleton/middleware"
 	"github.com/jmoiron/sqlx"
 )
 

@@ -6,12 +6,12 @@ import (
 	"testing"
 
 	_ "github.com/go-sql-driver/mysql"
-	apiTest "github.com/jacky-htg/go-services/controllers/tests"
-	"github.com/jacky-htg/go-services/libraries/auth"
-	"github.com/jacky-htg/go-services/libraries/config"
-	"github.com/jacky-htg/go-services/routing"
-	"github.com/jacky-htg/go-services/schema"
-	"github.com/jacky-htg/go-services/tests"
+	apiTest "bitbucket.org/rebelworksco/go-skeleton/controllers/tests"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/auth"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/config"
+	"bitbucket.org/rebelworksco/go-skeleton/routing"
+	"bitbucket.org/rebelworksco/go-skeleton/schema"
+	"bitbucket.org/rebelworksco/go-skeleton/tests"
 )
 
 var token string

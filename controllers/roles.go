@@ -7,10 +7,10 @@ import (
 	"strconv"
 
 	"github.com/go-chi/chi"
-	"github.com/jacky-htg/go-services/libraries/api"
-	"github.com/jacky-htg/go-services/models"
-	"github.com/jacky-htg/go-services/payloads/request"
-	"github.com/jacky-htg/go-services/payloads/response"
+	"bitbucket.org/rebelworksco/go-skeleton/libraries/api"
+	"bitbucket.org/rebelworksco/go-skeleton/models"
+	"bitbucket.org/rebelworksco/go-skeleton/payloads/request"
+	"bitbucket.org/rebelworksco/go-skeleton/payloads/response"
 	"github.com/jmoiron/sqlx"
 	"github.com/pkg/errors"
 )
