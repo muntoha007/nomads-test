@@ -1,9 +1,9 @@
-#Go Skeleton
+# Go Skeleton
 - GO Skeleton is skeleton for create API (Backend) in Rebelworks 
 - To help rapid development 
 - To standardize the coding
 
-##Get Started
+## Get Started
 - copy all files on https://bitbucket.org/rebelworksco/go-skeleton/src to your project directory
 - cp .env.example .env
 - edit .env with your environment
@@ -15,10 +15,10 @@
 - go test
 - go run main.go
 
-##Life Cycle
+## Life Cycle
 Request -> Middleware -> Controller -> Models -> Response
 
-##Directory Structure
+## Directory Structure
 -> cmd
 -> controllers
 -> libraries
@@ -30,7 +30,7 @@ Request -> Middleware -> Controller -> Models -> Response
 -> routing
 -> schema
 
-##Routing
+## Routing
 - Open routing/route.go
 - In the API function, add your routing
 ```
@@ -45,7 +45,7 @@ Request -> Middleware -> Controller -> Models -> Response
 	}
 ```
 
-##Migration
+## Migration
 - Open schema migrate.go
 - Add array migrations with your products table structure
 ```
@@ -65,7 +65,7 @@ CREATE TABLE products (
 ```
 - go run cmd/main.go migrate
 
-##Controller
+## Controller
 - Create new file controllers/products.go to handle all products routing
 ```
 package controllers
@@ -74,13 +74,13 @@ import (
 	...
 )
 
-//Products : struct for set Products Dependency Injection
+// Products : struct for set Products Dependency Injection
 type Products struct {
 	Db  *sqlx.DB
 	Log *log.Logger
 }
 
-//List : http handler for returning list of products
+// List : http handler for returning list of products
 func (u *Products) List(w http.ResponseWriter, r *http.Request) error {
 	var product models.Product
 	list, err := product.List(r.Context(), u.Db)
@@ -99,7 +99,7 @@ func (u *Products) List(w http.ResponseWriter, r *http.Request) error {
 	return api.ResponseOK(w, listResponse, http.StatusOK)
 }
 
-//View : http handler for retrieve product by id
+// View : http handler for retrieve product by id
 func (u *Products) View(w http.ResponseWriter, r *http.Request) error {
 	paramID := chi.URLParam(r, "id")
 
@@ -128,7 +128,7 @@ func (u *Products) View(w http.ResponseWriter, r *http.Request) error {
 	return api.ResponseOK(w, response, http.StatusOK)
 }
 
-//Create : http handler for create new product
+// Create : http handler for create new product
 func (u *Products) Create(w http.ResponseWriter, r *http.Request) error {
 	var productRequest request.NewProductRequest
 	err := api.Decode(r, &productRequest)
@@ -149,7 +149,7 @@ func (u *Products) Create(w http.ResponseWriter, r *http.Request) error {
 	return api.ResponseOK(w, response, http.StatusCreated)
 }
 
-//Update : http handler for update product by id
+// Update : http handler for update product by id
 func (u *Products) Update(w http.ResponseWriter, r *http.Request) error {
 	paramID := chi.URLParam(r, "id")
 
@@ -189,7 +189,7 @@ func (u *Products) Update(w http.ResponseWriter, r *http.Request) error {
 	return api.ResponseOK(w, response, http.StatusOK)
 }
 
-//Delete : http handler for delete product by id
+// Delete : http handler for delete product by id
 func (u *Products) Delete(w http.ResponseWriter, r *http.Request) error {
 	paramID := chi.URLParam(r, "id")
 
@@ -238,7 +238,7 @@ const qProducts = `SELECT id, name FROM products`
 
 // List of products
 func (u *Product) List(ctx context.Context, db *sqlx.DB) ([]Product, error) {
-	list := []Role{}
+	list := []Product{}
 	err := db.SelectContext(ctx, &list, qProducts)
 	return list, err
 }
@@ -294,9 +294,9 @@ func (u *Product) Update(ctx context.Context, db *sqlx.DB) error {
 	return err
 }
 
-//Delete role
-func (u *Role) Delete(ctx context.Context, db *sqlx.DB) error {
-	stmt, err := db.PreparexContext(ctx, `DELETE FROM roles WHERE id = ?`)
+// Delete product
+func (u *Product) Delete(ctx context.Context, db *sqlx.DB) error {
+	stmt, err := db.PreparexContext(ctx, `DELETE FROM products WHERE id = ?`)
 	if err != nil {
 		return err
 	}
@@ -309,7 +309,7 @@ func (u *Role) Delete(ctx context.Context, db *sqlx.DB) error {
 
 ```
 
-##Payload Request
+## Payload Request
 - Create new file payloads/request/product_request.go
 ```
 package request
@@ -349,7 +349,7 @@ func (u *ProductRequest) Transform(product *models.Product) *models.Product {
 
 ``` 
 
-###Validation
+### Validation
 - Each request need validation
 - For detail example please read https://github.com/go-playground/validator/tree/v9.29.1/_examples
 - Open payloads/request/product_request.go
@@ -367,7 +367,7 @@ type ProductRequest struct {
 }
 ```
 
-##Payload Response
+## Payload Response
 - Create new file payloads/response/product_response.go
 ```
 package response
@@ -382,7 +382,7 @@ type ProductResponse struct {
 	Name string `json:"name"`
 }
 
-//Transform from Product model to Product response
+// Transform from Product model to Product response
 func (u *ProductResponse) Transform(product *models.Product) {
 	u.ID = product.ID
 	u.Name = product.Name
