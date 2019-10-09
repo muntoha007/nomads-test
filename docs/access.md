@@ -5,7 +5,8 @@ method | url | description
 --- | --- | ---
 [GET](#list) | [/access](#list) | Get All List Access
 
-## <a name="list"></a> GET /access
+## GET /access
+<a name="list"></a>
 ### Response
 ```
 {
