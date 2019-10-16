@@ -62,5 +62,25 @@ func API(db *sqlx.DB, log *log.Logger) http.Handler {
 		app.Handle(http.MethodGet, "/access", access.List)
 	}
 
+	// Brands Routing
+	{
+		brands := controllers.Brands{Db: db, Log: log}
+		app.Handle(http.MethodGet, "/brands", brands.List)
+		app.Handle(http.MethodGet, "/brands/{id}", brands.View)
+		app.Handle(http.MethodPost, "/brands", brands.Create)
+		app.Handle(http.MethodPut, "/brands/{id}", brands.Update)
+		app.Handle(http.MethodDelete, "/brands/{id}", brands.Delete)
+	}
+
+	// Vehicles Routing
+	{
+		vehicles := controllers.Vehicles{Db: db, Log: log}
+		app.Handle(http.MethodGet, "/vehicles", vehicles.List)
+		app.Handle(http.MethodGet, "/vehicles/{id}", vehicles.View)
+		app.Handle(http.MethodPost, "/vehicles", vehicles.Create)
+		app.Handle(http.MethodPut, "/vehicles/{id}", vehicles.Update)
+		app.Handle(http.MethodDelete, "/vehicles/{id}", vehicles.Delete)
+	}
+
 	return app
 }

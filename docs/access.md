@@ -1,5 +1,5 @@
 # Access
-modul master akses
+modul master access
 
 method | url | description
 --- | --- | ---

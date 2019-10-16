@@ -80,6 +80,33 @@ CREATE TABLE roles_users (
 	CONSTRAINT fk_roles_users_to_users FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );`,
 	},
+	{
+		Version:     6,
+		Description: "Add brands",
+		Script: `
+				CREATE TABLE brands (
+					id   		BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+					name        varchar(255) NOT NULL UNIQUE,
+					created 	TIMESTAMP NOT NULL DEFAULT NOW(),
+					updated 	TIMESTAMP NOT NULL DEFAULT NOW(),
+					PRIMARY KEY (id)
+				);`,
+	},
+	{
+		Version:     7,
+		Description: "Add vehicles",
+		Script: `
+				CREATE TABLE vehicles (
+					id   			BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+					brand_id        BIGINT(20) UNSIGNED NOT NULL,
+					vehicle_name    varchar(255) NOT NULL UNIQUE,
+					created 		TIMESTAMP NOT NULL DEFAULT NOW(),
+					updated 		TIMESTAMP NOT NULL DEFAULT NOW(),
+					PRIMARY KEY (id),
+					KEY vehicle_brand_id (brand_id),
+					CONSTRAINT fk_vehicles_to_brands FOREIGN KEY (brand_id) REFERENCES brands(id) ON DELETE CASCADE ON UPDATE CASCADE
+				);`,
+	},
 }
 
 // Migrate attempts to bring the schema for db up to date with the migrations

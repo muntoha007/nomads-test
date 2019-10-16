@@ -40,6 +40,14 @@ const seedRolesUsers string = `
 INSERT INTO roles_users (role_id, user_id) VALUES (1, 1);
 `
 
+const seedBrands string = `
+INSERT INTO brands (id, name, created) VALUES (1, 'Honda', NOW());
+`
+
+const seedVehicles string = `
+INSERT INTO vehicles (brand_id, vehicle_name, created) VALUES (1, 'Vario 125', NOW());
+`
+
 // Seed runs the set of seed-data queries against db. The queries are ran in a
 // transaction and rolled back if any fail.
 func Seed(db *sqlx.DB) error {
@@ -49,6 +57,8 @@ func Seed(db *sqlx.DB) error {
 		seedRoles,
 		seedAccessRoles,
 		seedRolesUsers,
+		seedBrands,
+		seedVehicles,
 	}
 
 	tx, err := db.Begin()
